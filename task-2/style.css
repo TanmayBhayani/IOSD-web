@@ -1,0 +1,63 @@
+html, body {
+    background-color: #2db4b4;
+    height: 100%;
+}
+#image {
+    display: none;
+}
+h1{
+    color: white;
+    font-size: 4vw;
+}
+#wrapper {
+    display: flex;
+    padding: 10%;
+    height: 100%;
+    padding: 5%;
+}
+#signup {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 70%;
+}
+a {
+    text-decoration: none;
+}
+input {
+    height: 6%;
+    width: 100%;
+    margin: 2%;
+    border-radius: 40px;
+    padding: 15px;
+    font-size: 3vw;
+}
+button {
+    width: 50%;
+    height: 15%;
+    border-radius: 50px;
+    font-size: 120%;
+}
+@media only screen and (min-width:992px){
+    #image {
+        display: inline-block;
+        flex-basis: 50%;
+    }
+    #signup {
+        flex-basis: 50%;
+    }
+    form {
+        width: 60%
+    }
+    input {
+        font-size: 1.5vw;
+    }
+}

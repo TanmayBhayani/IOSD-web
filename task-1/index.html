@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header></header>
+        <div id="sidebar" role="navigation" class="">
+            <button id="hamburger">
+                <div id="bar"></div>
+                <div id="bar"></div>
+                <div id="bar"></div>
+            </button>
+            <ul class="nav nav-pills nav-stacked" id="links">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </div>
+        <div class="container" id="content">
+            <div class="row">
+                <p class="col-md-4">ipsum dolor sit, amet consectetur adipisicing elit. Eaque, dolor sunt? Officia unde beatae modi, corrupti ut atque error, quisquam a molestiae distinctio minus. Labore obcaecati impedit unde voluptatum veritatis voluptate aliquam nulla ad harum, corporis minima perspiciatis voluptatibus, odio dolorem nam pariatur accusantium dolor repellendus nisi nihil sapiente atque fuga placeat consectetur? Adipisci repudiandae inventore soluta eius maiores omnis iste magni fugiat quibusdam ut fuga, debitis fugit quas eos et enim, suscipit sed ea libero quia? Corporis, aliquid. Dolores pariatur assumenda molestiae aut consectetur! Aspernatur tempore, facere ratione ipsam aut fugiat sapiente accusamus minus, provident voluptatum inventore consequatur quaerat totam fuga! Repudiandae exercitationem adipisci ipsum ea doloremque reprehenderit temporibus tenetur velit culpa nam nisi quis harum necessitatibus laboriosam nihil, officia earum fugiat quaerat vero? Neque voluptatibus nam incidunt architecto? Blanditiis doloremque dolorem facere unde aliquam!</p>
+                <p class="col-md-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem dolores corporis, distinctio nesciunt vero cum soluta ipsa temporibus sint autem animi reprehenderit nobis architecto quis assumenda consequuntur iure repudiandae, quidem minus error nemo sit commodi facilis. A accusamus modi quis, tempore fugit pariatur nobis, ducimus consequatur obcaecati quibusdam sit magnam sequi doloribus beatae fuga tenetur atque exercitationem at labore mollitia. Similique nulla ratione ullam nihil natus tenetur amet autem consequuntur saepe distinctio. Ipsa modi debitis possimus impedit et similique autem nostrum pariatur illum. Accusamus nihil sed ipsum at excepturi alias ut dolores, tenetur, enim expedita nisi facilis reiciendis doloribus.</p>
+                <p class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit velit ab illo dignissimos dicta, nam nostrum dolore quasi voluptatibus ad possimus maiores sint vitae, reiciendis laborum odio dolorem magnam inventore tempore non adipisci. Quam dignissimos inventore ducimus ipsa harum accusamus qui ex natus assumenda rem, voluptate unde iure, non vitae ad, totam deleniti necessitatibus! Veritatis illo doloremque vero beatae recusandae vel, doloribus tempora facere cum numquam magnam sequi, dolorum illum fugit expedita, molestias et odio obcaecati nam minima! Quam tenetur sequi est commodi nihil enim perferendis quae, obcaecati expedita laudantium? Nihil hic sed dolorem molestiae consequatur obcaecati quia, inventore natus!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const links = document.getElementById('links');
+        function toggleBar(){
+            if(sidebar.classList.contains('open')){
+                links.classList.remove('open');
+                sidebar.classList.remove('open');
+            }
+            else{
+                sidebar.classList.add('open');
+                sidebar.addEventListener('transitionend',() => sidebar.classList.contains('open') && links.classList.add('open'));
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click',toggleBar);
+    </script>
+</body>
+</html>
